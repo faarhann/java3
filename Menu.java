@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class Menu {
+
+    private ArrayList<String> meals;
+
+    public Menu() {
+        this.meals = new ArrayList<String>();
+    }
+
+    public void addMeal(String meal){
+
+        if (this.meals.contains(meal)){
+            System.out.println("That meal already exists in the list");
+        }
+        this.meals.add(meal);
+    }
+
+    public void printMeals(){
+
+            for (String items: this.meals){
+                System.out.println(items);
+        }
+    }
+
+    public void clearMenu(){
+
+        this.meals.clear();
+
+    }
+
+}
